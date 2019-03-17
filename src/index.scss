@@ -1,0 +1,16 @@
+@import './static/styles/base/imports';
+html,
+body {
+  background: #fff;
+  height: 100%;
+}
+
+#root {
+  background: #fff;
+  margin-bottom: convert-to-rem(80px);
+}
+
+.wwn-body {
+  max-width: 1440px;
+  margin: auto;
+}

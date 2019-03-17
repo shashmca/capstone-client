@@ -1,0 +1,9 @@
+@import '../../../main/imports';
+.wwn-footer-li {
+    display: inline-block;
+    &-link {
+        @include font-size(12px);
+        @include margin-left(4px);
+        padding: 0;
+    }
+}

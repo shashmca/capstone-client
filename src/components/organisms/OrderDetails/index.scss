@@ -1,0 +1,11 @@
+@import '../../../static/styles/base/imports';
+.order-container {
+    border: 1px solid #eee;
+    @include padding(20px 20px 0px 20px);
+    @include margin-bottom(20px);
+    .order-product:last-child {
+        hr {
+            display: none;
+        }
+    }
+}

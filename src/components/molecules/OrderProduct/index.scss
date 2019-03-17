@@ -1,0 +1,23 @@
+@import '../../../static/styles/base/imports';
+.cart-prod {
+    @include padding-top(10px);
+    @include padding-bottom(10px);
+    @media #{$tablet} {
+        @include padding-top(15px);
+        @include padding-bottom(15px);
+    }
+    .prod-attr:after {
+        content: "";
+        display: inline-block;
+        height: 10px;
+        width: 1px;
+        border-left: 1px solid black;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .prod-attrs {
+        .prod-attr:last-child:after {
+            display: none;
+        }
+    }
+}

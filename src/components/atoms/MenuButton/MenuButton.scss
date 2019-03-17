@@ -1,0 +1,15 @@
+@import '../../../main/imports';
+.wwn-header-menu {
+    @include left(76px);
+    @include height(24px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    svg {
+        height: 100%;
+    }
+    @media #{$tablet} {
+        @include left(96px);
+    }
+}

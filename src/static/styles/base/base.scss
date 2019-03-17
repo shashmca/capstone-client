@@ -1,0 +1,153 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../vendor/all.css';
+@import '../vendor/style.css';
+@import 'fonts';
+@import 'imports';
+// Text node resets
+$text-elements:('h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'b', 'i', 'div', 'span', 'section', 'article', 'aside', 'nav', 'header', 'footer', 'ul', 'li');
+%resetcss {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+
+%basefontfamily {
+    font-family: $ff-roboto;
+}
+
+@each $element in $text-elements {
+    #{$element} {
+        @extend %resetcss;
+    }
+    #{$element} {
+        @extend %basefontfamily;
+    }
+}
+
+a {
+    &,
+    &:hover,
+    &:visited,
+    &:focus {
+        display: inline-block;
+        color: $color-link;
+        background-color: inherit;
+    }
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+    background-color: transparent;
+    @extend %resetcss;
+}
+
+html {
+    @include line-height(24px, $font-baseline);
+    font-size: $font-baseline;
+    @media #{$tablet} {
+        font-size: calculate-base-font($v-tablet);
+    }
+    @media #{$tablet-large} {
+        font-size: calculate-base-font($v-tablet-l);
+    }
+    @media #{$desktop} {
+        font-size: calculate-base-font($v-desktop);
+    }
+    @media #{$desktop-large} {
+        font-size: calculate-base-font($v-desktop-l);
+    }
+}
+
+body {
+    @extend %basefontfamily;
+    background-color: $bg-body; // height: 100vh;
+}
+
+.wwn-app {
+    @include padding-bottom(100px);
+}
+
+.wwn-container {
+    max-width: 100%;
+    margin: 0 auto;
+    @media #{$tablet} {
+        @include max-width(1920px);
+        @include padding-left(15px);
+        @include padding-right(15px);
+    }
+}
+
+.wwn-container {
+    .row {
+        @include margin-left(-15px);
+        @include margin-right(-15px);
+    }
+    [class*="col-"] {
+        @include padding-left(15px);
+        @include padding-right(15px);
+        @media #{$mobile} {
+            @include padding-left(10px);
+            @include padding-right(10px);
+        }
+    }
+}
+
+ul {
+    list-style-type: none;
+    &,
+    & li {
+        @extend %resetcss;
+    }
+}
+
+nav {
+    text-align: left;
+    li {
+        display: block;
+    }
+    a {
+        @include padding(20px);
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    a {
+        @include font-size(16px);
+    }
+}
+
+.wwn-social-img {
+    max-width: 100%;
+    padding-left: 10%;
+}
+
+.prod-box {
+    box-shadow: 5px 5px 30px #d3d3d3;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

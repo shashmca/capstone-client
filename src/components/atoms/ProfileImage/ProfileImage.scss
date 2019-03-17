@@ -1,0 +1,23 @@
+@import '../../../main/imports';
+.wwn-profile-image {
+    @include padding(10px);
+    @include width(120px);
+    @include height(120px);
+    border: convert-to-rem(5px) solid #EC3D4B;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto convert-to-rem(20px);
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    @media #{$tablet} {
+        @include padding(20px);
+        @include width(300px);
+        @include height(300px);
+    }
+}

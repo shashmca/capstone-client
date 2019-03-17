@@ -1,0 +1,22 @@
+@import '../../../static/styles/base/imports';
+.category-list {
+  a {
+    position: relative;
+    border: 1px solid #d3d3d3;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.carousel-caption {
+  padding: 0;
+  background: #d3d3d3;
+  opacity: 0.6;
+  position: relative;
+  @media #{$tablet} {}
+  .cat-head {
+    @include font-size(20px);
+    margin: 0;
+  }
+}

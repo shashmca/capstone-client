@@ -1,0 +1,21 @@
+// @import '../../../main/imports';
+@import '../../../static/styles/base/_imports.scss';
+.wwn-profile-section {
+    @include padding(20px);
+    @include margin-bottom(20px);
+    @include border-radius(3px);
+    background-color: #f6f6f6;
+    &-heading {
+        display: inline-block;
+        width: 100%;
+        h2 {
+            @include padding-right(10px);
+        }
+    }
+    &-content {
+        @include padding(20px 0);
+    }
+    .signout-btn {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,23 @@
+// background-colors
+$bg-body: #f6f6f6;
+$bg-header: #fff;
+$bg-footer: #eee;
+$bg-nav: $bg-header;
+$bg-backdrop-hidden: rgba(0, 0, 0, 0);
+$bg-backdrop: rgba(0, 0, 0, 0.6);
+$bg-logout: #dadada;
+$bg-logout-btn: $bg-header;
+$bg-inset: #333;
+$bg-loader: $bg-header;
+$bg-loader-card: #d9d9d9;
+// Colors
+$color-font: $bg-inset;
+$color-font-invert: $bg-header;
+$color-title: #555;
+$color-theme: #EC3D4B;
+$color-loader: #d9d9d9;
+$color-twitter: #999;
+$color-link: #212529; 
+// Borders
+$border-default: #e9e9e9;
+$border-btn: #aaa;

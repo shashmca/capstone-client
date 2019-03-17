@@ -1,0 +1,9 @@
+@import '../../../main/imports';
+.wwn-footer-li-icon {
+    @include margin-left(8px);
+    display: inline-block;
+    svg {
+        @include width(12px);
+        @include margin-top(-1px);
+    }
+}

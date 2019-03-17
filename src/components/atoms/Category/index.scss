@@ -1,0 +1,21 @@
+@import '../../../static/styles/base/imports';
+.category-list {
+  .carousel-caption {
+    right: 0;
+    bottom: convert-to-rem(20px);
+    left: convert-to-rem(20px);
+    width: 100%;
+    left: 0;
+    right: 0;
+    color: #000;
+    bottom: 0;
+    opacity: 0.8;
+    background-color: #d3d3d3;
+    padding: 5px;
+    text-align: center;
+    .cat-head {
+      @include font-size(20px);
+      margin: 0;
+    }
+  }
+}

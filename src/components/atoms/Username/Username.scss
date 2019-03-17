@@ -1,0 +1,15 @@
+@import '../../../main/imports';
+.wwn-username {
+    @include margin(20px);
+    @include font-size(14px);
+    @include rem-line-height(18px);
+    text-transform: uppercase;
+    &-value {
+        @include padding(10px 20px);
+        @include margin-left(5px);
+        @include border-radius(20px);
+        @include box-shadow-user;
+        background-color: $color-theme;
+        color: $color-font-invert;
+    }
+}

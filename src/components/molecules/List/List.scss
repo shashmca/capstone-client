@@ -1,0 +1,12 @@
+@import '../../../main/imports';
+.wwn-list {
+    @include vertical-scroll-touch;
+    height: calc(100vh - #{convert-to-rem(118px)});
+    margin: 0;
+    &-li-link {
+        width: 100%;
+    }
+    @media #{$tablet} {
+        height: calc(100vh - #{convert-to-rem(93px)});
+    }
+}

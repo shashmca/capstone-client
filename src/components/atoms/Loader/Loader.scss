@@ -1,0 +1,102 @@
+@import '../../../main/imports';
+@-webkit-keyframes skeletonGloss {
+    0% {
+        left: -100%
+    }
+    50% {
+        left: 0
+    }
+    100% {
+        left: 100%
+    }
+}
+
+@keyframes skeletonGloss {
+    0% {
+        left: -100%
+    }
+    50% {
+        left: 0
+    }
+    100% {
+        left: 100%
+    }
+}
+
+.j-act-skeleton-wrap .j-act-skeleton .j-act-skeleton-content {
+    margin-left: 0
+}
+
+.j-act-skeleton {
+    @include border-radius(4px);
+    @include padding(20px);
+    @include margin-bottom(20px);
+    position: relative;
+    background: $bg-loader;
+    span,
+    p {
+        display: block;
+        background: $bg-loader-card;
+        overflow: hidden;
+        position: relative;
+        &::before {
+            background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+    span::before,
+    p::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        -webkit-animation: skeletonGloss 1.5s infinite linear;
+        animation: skeletonGloss 1.5s infinite linear;
+    }
+    .j-act-skeleton-top {
+        @include padding(10px 0 0 60px);
+        @include height(48px);
+        @include margin-bottom(20px);
+        position: relative;
+        .j-act-skeleton-avatar {
+            @include width(48px);
+            @include height(48px);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            &::before {
+                display: none;
+            }
+        }
+        .j-act-skeleton-name {
+            @include max-width(180px);
+            @include height(10px);
+        }
+        .j-act-skeleton-meta {
+            @include max-width(120px);
+            @include height(10px);
+            @include margin-top(10px);
+        }
+    }
+    .j-act-skeleton-img {
+        @include font-size(70px);
+        @include margin-top(-3px);
+        float: left;
+        color: $color-loader;
+    }
+    .j-act-skeleton-content {
+        @include max-width(320px);
+        @include height(8px);
+        @include margin(0 0 20px 85px);
+        +.j-act-skeleton-content {
+            @include max-width(360px);
+            +.j-act-skeleton-content {
+                @include max-width(280px);
+            }
+        }
+    }
+}

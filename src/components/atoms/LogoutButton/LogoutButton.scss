@@ -1,0 +1,38 @@
+// @import '../../../main/imports';
+@import '../../../static/styles/base/_imports.scss';
+.wwn-logout {
+    &-wrapper {
+        @include padding(0 15px);
+        @include top(10px);
+        right: 0;
+        position: absolute;
+        display: inline-block;
+        line-height: normal;
+        cursor: pointer;
+        @media #{$tablet} {
+            @include margin(20px 10px);
+            position: static;
+        }
+    }
+    @include padding(5px);
+    @include box-shadow-button;
+    line-height: normal;
+    transform: rotate(90deg);
+    border-radius: 50%;
+    background-color: $bg-logout-btn;
+    i {
+        display: inline-block;
+    }
+    svg {
+        @include width(25px);
+        @include height(25px);
+    }
+    &-text {
+        @include margin-left(5px);
+        @include font-size(13px);
+        @include rem-line-height(16px);
+        display: inline-block;
+        text-transform: uppercase;
+        color: $color-theme;
+    }
+}

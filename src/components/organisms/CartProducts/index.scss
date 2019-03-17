@@ -1,0 +1,13 @@
+@import '../../../static/styles/base/imports';
+.cart-container {
+    @media #{$mobile} {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .cart-heading {
+        @include margin-bottom(25px);
+        @media #{$tablet} {
+            @include margin-bottom(80px);
+        }
+    }
+}
